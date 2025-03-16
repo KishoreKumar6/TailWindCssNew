@@ -7,7 +7,7 @@ body {
   justify-content: center;
 }
 button {
-  background-color: burlywood;
+  background-color: rgb(226, 226, 37);
   border: none;
   padding: 10px 20px;
   font-size: 15px;
@@ -15,14 +15,18 @@ button {
   border-radius: 5px;
   text-transform: uppercase;
   box-shadow: 3px 3px 6px rgb(0, 0, 0.9);
+  height: 40px;
+  margin-top: 25px;
 }
 .container {
+  width: 100%;
+  height: auto;
   padding: 50px;
   justify-items: center;
   background-color: rgb(196, 45, 45);
   box-shadow: 0px 0px 8px 3px rgb(252, 252, 252);
-  background-image:url('6239117.jpg') ;
-  background-repeat: no-repeat; 
+  background-image: url("6239117.jpg");
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -38,7 +42,6 @@ h2 {
   text-shadow: 2px 3px 15px rgba(0, 0, 0, 0.9);
 }
 .game {
-  /* border: solid 1px; */
   width: 515px;
   height: 440px;
   display: flex;
@@ -48,7 +51,9 @@ h2 {
   perspective: 500px;
   justify-content: space-between;
   margin-bottom: 20px;
+  border: 5px solid red;
 }
+
 .item {
   position: relative;
   width: 100px;
@@ -60,6 +65,7 @@ h2 {
   background-color: white;
   transition: 0.25s;
   transform: rotateY(180deg);
+  cursor: pointer;
 }
 .item:hover {
   box-shadow: 0px 0px 7px 3px rgb(241, 238, 238);
@@ -67,17 +73,42 @@ h2 {
 .item:after {
   content: "";
   position: absolute;
-  inset: 0;
-  background-color: bisque;
+  inset: 10px;
+  background-color: rgb(94, 161, 224);
   transition: 0.25s;
   transform: rotateY(0deg);
   backface-visibility: hidden;
   /* opacity: 0.85; */
 }
-.item.boxOpen {
+.boxOpen {
   transform: rotateY(0deg);
 }
 .boxOpen:after,
 .boxMatch:after {
   transform: rotateY(180deg);
+}
+.score {
+  display: flex;
+  gap: 50px;
+}
+.player1 {
+  color: blue;
+  font-weight: 900;
+  font-size: 25px;
+  background-color: rgb(156, 156, 229);
+  padding: 5px;
+}
+.player2 {
+  color: blue;
+  font-weight: 900;
+  font-size: 25px;
+  background-color: rgb(156, 156, 229);
+  padding: 5px;
+}
+.turn {
+  color: blue;
+  font-weight: 900;
+  font-size: 25px;
+  background-color: rgb(230, 118, 118);
+  padding: 5px;
 }
